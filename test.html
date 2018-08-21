@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=false">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test</title>
+  <!-- Подключение 12 колоночной сетки bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+  <!-- Стили самого документа -->
+  <link rel="stylesheet" href="css/test.css">
+
+</head>
+
+<body>
+<!-- Сама секция с тестом -->
+<section class="test">
+  <!-- Прогрес бар которая меняется -->
+  <div class="container">
+    <div class="p-bar-wrapper">
+      <div class="p-bar">
+        <div class="p-bar_value"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Слайдер наш и есть большая форма -->
+  <form method="POST" id="testForm">
+
+    <!-- Сам слайдер с тестами -->
+    <div class="test-slider">
+
+      <!-- Элемент теста -->
+      <div class="test-slider_item">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="test-title">Вопрос 1</h3>
+              <h4 class="test-subtitle">Ввод только цифр</h4>
+              <!-- Аттрибут name может быть Любой под задачу -->
+              <input type="number" name="numberInput">
+              <button type="button" class="next-test">Следующий вопрос</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-slider_item">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="test-title">Вопрос 2</h3>
+              <h4 class="test-subtitle">Выбор нескольких изображений</h4>
+              <div class="inner-form-slider">
+                <div class="selectImg slide">
+                  <label>
+                    <!-- Тип является чекбоксом -->
+                    <input type="checkbox" name="selectImage[]" value="Изображение1">
+                    <img src="img/1.jpg" alt="1">
+                  </label>
+                </div>
+                <div class="selectImg slide">
+                  <label>
+                    <input type="checkbox" name="selectImage[]" value="Изображение2">
+                    <img src="img/2.jpg" alt="2">
+                  </label>
+                </div>
+                <div class="selectImg slide">
+                  <label>
+                    <input type="checkbox" name="selectImage[]" value="Изображение3">
+                    <img src="img/3.jpg" alt="3">
+                  </label>
+                </div>
+                <div class="selectImg slide">
+                  <label>
+                    <input type="checkbox" name="selectImage[]" value="Изображение4">
+                    <img src="img/4.jpg" alt="4">
+                  </label>
+                </div>
+                <div class="selectImg slide">
+                  <label>
+                    <input type="checkbox" name="selectImage[]" value="img5">
+                    <img src="img/5.jpg" alt="5">
+                  </label>
+                </div>
+              </div>
+              <button type="button" class="next-test">Следующий вопрос</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-slider_item">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="test-title">Вопрос 3</h3>
+              <h4 class="test-subtitle">Выбор одного изображения</h4>
+              <div class="inner-form-slider">
+                <div class="selectImg slide">
+                  <label>
+                    <input type="radio" name="selectOneImage" value="Первое">
+                    <img src="img/5.jpg" alt="5">
+                  </label>
+                </div>
+                <div class="selectImg slide">
+                  <label>
+                    <input type="radio" name="selectOneImage" value="Второе">
+                    <img src="img/4.jpg" alt="4">
+                  </label>
+                </div>
+                <div class="selectImg slide">
+                  <label>
+                    <input type="radio" name="selectOneImage" value="Третье">
+                    <img src="img/3.jpg" alt="3">
+                  </label>
+                </div>
+                <div class="selectImg slide">
+                  <label>
+                    <input type="radio" name="selectOneImage" value="Четвертое">
+                    <img src="img/2.jpg" alt="2">
+                  </label>
+                </div>
+                <div class="selectImg slide">
+                  <label>
+                    <input type="radio" name="selectOneImage" value="Пятое">
+                    <img src="img/1.jpg" alt="1">
+                  </label>
+                </div>
+              </div>
+              <button type="button" class="next-test">Следующий вопрос</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-slider_item">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="test-title">Вопрос 4</h3>
+              <h4 class="test-subtitle">Ввод простого текста</h4>
+              <input type="text" name="simpleText" placeholder="Тут какой-то текст">
+              <button type="button" class="next-test">Следующий вопрос</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-slider_item">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="test-title">Вопрос 5</h3>
+              <h4 class="test-subtitle">Простой мультивыбор</h4>
+
+              <label for="multiChoice1">Товар 1</label>
+              <input type="checkbox" name="multipleChoice[]" value="мультиВыбор1" id="multiChoice1">
+
+              <label for="multiChoice2">Товар 2</label>
+              <input type="checkbox" name="multipleChoice[]" value="мультиВыбор2" id="multiChoice2">
+
+              <br>
+
+              <label for="multiChoice3">Товар 3</label>
+              <input type="checkbox" name="multipleChoice[]" value="мультиВыбор3" id="multiChoice3">
+
+              <label for="multiChoice4">Товар 4</label>
+              <input type="checkbox" name="multipleChoice[]" value="мультиВыбор4" id="multiChoice4">
+              <button type="button" class="next-test">Следующий вопрос</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-slider_item">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="test-title">Вопрос 6</h3>
+              <h4 class="test-subtitle">Простой одиночный выбор</h4>
+
+              <label for="oneChoice1">Товар 1</label>
+              <input type="radio" name="oneChoice" value="Одиночный выбор 1" id="oneChoice1">
+
+              <label for="oneChoice2">Товар 2</label>
+              <input type="radio" name="oneChoice" value="Одиночный выбор 2" id="oneChoice2">
+
+              <br>
+
+              <label for="oneChoice3">Товар 3</label>
+              <input type="radio" name="oneChoice" value="Одиночный выбор 3" id="oneChoice3">
+
+              <label for="oneChoice4">Товар 4</label>
+              <input type="radio" name="oneChoice" value="Одиночный выбор 4" id="oneChoice4">
+
+              <button type="button" class="next-test">Следующий вопрос</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-slider_item">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="test-title">Вопрос 7</h3>
+              <h4 class="test-subtitle">Выбор</h4>
+              <label for="selectOne">Выберите что вам нравится</label>
+              <select name="dropdownSelect" id="selectOne">
+                <option value="">Выбери</option>
+                <option value="Элемент 1">Элемент 1</option>
+                <option value="Элемент 2">Элемент 2</option>
+                <option value="Элемент 3">Элемент 3</option>
+              </select>
+              <button type="button" class="next-test">Следующий вопрос</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-slider_item">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="test-title">Спасибо за оставленные ответы</h3>
+              <h4 class="test-subtitle">Напишите ваш email чтобы мы смогли связаться с вами</h4>
+              <input type="email" name="email" placeholder="Ваш Email">
+              <button type="submit" class="next-test submit">Отправить!</button>
+              <div id="result">
+                <!-- Тут будет выводиться всё что выбрал пользователь -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- Подключение библиотеки jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<!-- Подключение слайдера Slick через CDN -->
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<script src="js/test.js"></script>
+</body>
+
+</html>

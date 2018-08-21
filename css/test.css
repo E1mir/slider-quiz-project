@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* У самой секции высота полностью в высоту окна */
+
+section.test {
+  height: 100vh;
+}
+
+.test-slider_item {
+  outline: none;
+}
+
+.p-bar-wrapper {
+  position: relative;
+  text-transform: uppercase;
+}
+
+.p-bar-wrapper>.p-bar {
+  position: relative;
+  display: block;
+  height: 10px;
+  background-color: rgb(139, 241, 99);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.p-bar-wrapper>.p-bar>.p-bar_value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  background-color: rgb(51, 110, 46);
+  height: 100%;
+}
+
+.selectImg {
+  display: inline-block;
+  outline: none;
+  margin: 0 2px;
+}
+
+.selectImg img {
+  max-width: 100%;
+}
+
+.selectImg>label {
+  display: inline-block;
+}
+
+.selectImg>label>input[type='checkbox'], .selectImg>label>input[type='radio'] {
+  display: none;
+}
+
+.selectImg>label>input[type='checkbox']:checked~img, .selectImg>label>input[type='radio']:checked~img {
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  border: 1px solid red;
+}
+
+/* Удаление стрелочек в типе number*/
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
